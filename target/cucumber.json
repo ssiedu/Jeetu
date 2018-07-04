@@ -1,0 +1,133 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 112954094,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user should be on google home page",
+            "match": {
+              "location": "GoogleSignupSteps.user_should_be_on_google_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "verify the elemenets on create event page",
+        "description": "",
+        "id": "create-google-account;verify-the-elemenets-on-create-event-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 266678983,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enter email id as \"manjeetlms@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "manjeetlms@gmail.com",
+                  "offset": 24
+                }
+              ],
+              "location": "GoogleSignupSteps.user_enter_email_id_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121468018,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "click on the first next button",
+            "match": {
+              "location": "GoogleSignupSteps.click_on_the_next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1074890863,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify it is showing the next page with password field",
+            "match": {
+              "location": "GoogleSignupSteps.verify_it_is_showing_the_next_page_with_password_field()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 196187830,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "usre enter password as \"1234@lms\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1234@lms",
+                  "offset": 24
+                }
+              ],
+              "location": "GoogleSignupSteps.usre_enter_password_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171382819,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "click on the second next button",
+            "match": {
+              "location": "GoogleSignupSteps.click_on_the_second_next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12829027701,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "verify that user is on home page",
+            "match": {
+              "location": "GoogleSignupSteps.verify_that_user_is_on_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "create google account",
+    "description": "",
+    "id": "create-google-account",
+    "keyword": "Feature",
+    "uri": "FeatureFiles/googleSignup.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@google"
+      }
+    ]
+  }
+]
