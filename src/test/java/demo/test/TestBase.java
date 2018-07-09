@@ -17,11 +17,11 @@ public class TestBase extends Driverutil{
 	
 	
 	
-	public static void creatNewSession() throws MalformedURLException {		
+	public static void creatNewSession() throws MalformedURLException, InterruptedException {		
 //System.setProperty("webdriver.chrome.driver", "E:\\javaproject\\sumeettestproject\\chromedriver.exe");
 //driver = new ChromeDriver();
 //driver.get("https://accounts.google.com/ServiceLogin");
-		 DesiredCapabilities capabilities;
+		
 		   System.out.println("sauce lab setup started...");
 		   DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		   String selenium_browser = System.getenv("SELENIUM_BROWSER");
@@ -42,6 +42,9 @@ public class TestBase extends Driverutil{
 		   String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s", sessionId, jobName);
 		   System.out.println(">>**>>" + message);
 		   System.out.println("sauce lab setup completed");
+		   driver.get("https://accounts.google.com/ServiceLogin");
+		   System.out.println("url open");
+		   Thread.sleep(4000);
 	}
 
 	
