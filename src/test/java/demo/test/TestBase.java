@@ -30,15 +30,15 @@ public class TestBase extends Driverutil{
 			desiredCapabilities.setVersion(selenium_version);
 			String platform = System.getenv("SELENIUM_PLATFORM");
 			desiredCapabilities.setCapability("platform", platform);
-		   String sauceUserName = System.getProperty("sauceUserName");
-		   String sauceAccessKey = System.getProperty("sauceAccessKey");
-		   System.out.println("with sauce capabilities =" + capabilities);
+		   String sauceUserName = "sptestnew2";
+		   String sauceAccessKey = "bc80fb59-57d5-4cfd-b4f6-16480c50af20";
+		   System.out.println("with sauce capabilities =" + desiredCapabilities);
 		   
 		   driver = new RemoteWebDriver(new URL(MessageFormat.format("http://{0}:{1}@ondemand.saucelabs.com:80/wd/hub", sauceUserName, sauceAccessKey)),
-		     capabilities);
+				   desiredCapabilities);
 		  String sessionId = (((RemoteWebDriver) driver).getSessionId()).toString();
 		   System.setProperty("sessionId", sessionId);
-		   Object jobName = capabilities.getCapability("name");
+		   Object jobName = desiredCapabilities.getCapability("name");
 		   String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s", sessionId, jobName);
 		   System.out.println(">>**>>" + message);
 		   System.out.println("sauce lab setup completed");
